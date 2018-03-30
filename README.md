@@ -1,6 +1,6 @@
 # TensorFlow-GPU
 
-Tensorflow Version: 1.6
+Tensorflow Version: 1.2
 
 Example script to run job on MCW-RCC GPU cluster:
 ```
@@ -12,7 +12,7 @@ Example script to run job on MCW-RCC GPU cluster:
 #PBS -l walltime=72:00:00
 #PBS -j oe
 
-module load tensorflow/1.6                    # Load the TensorFlow software
+module load tensorflow/1.2                    # Load the TensorFlow software
 
 cd $PBS_O_WORKDIR
 export SCR_DIR=/scratch/global/$USER/$PBS_JOBID

@@ -1,7 +1,7 @@
 # TensorFlow-GPU
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/840)
 
-Tensorflow Version: 1.6
+Tensorflow Version: 1.8
 
 Example script to run job on MCW-RCC GPU cluster:
 ```
@@ -13,7 +13,7 @@ Example script to run job on MCW-RCC GPU cluster:
 #PBS -l walltime=72:00:00
 #PBS -j oe
 
-module load tensorflow/1.6                    # Load the TensorFlow software
+module load tensorflow/1.8                    # Load the TensorFlow software
 
 cd $PBS_O_WORKDIR
 export SCR_DIR=/scratch/global/$USER/$PBS_JOBID

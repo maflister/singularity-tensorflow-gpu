@@ -3,7 +3,6 @@ From: ubuntu:16.04
 
 %labels
 Maintainer Matthew Flister
-Version v18.05
 
 %help
 This container runs Tensorflow-GPU 1.8.
@@ -33,6 +32,7 @@ This container runs Tensorflow-GPU 1.8.
         libatlas-base-dev \
         libboost-all-dev \
         libhdf5-serial-dev \
+        libopencv-dev \
         libprotobuf-dev \
         protobuf-compiler \
         libopenblas-dev \
@@ -57,12 +57,12 @@ This container runs Tensorflow-GPU 1.8.
     pip install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages
-    pip install --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter
+    pip install --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter opencv
 
     # Install TensorFlow-GPU
     export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.8.0-cp35-cp35m-linux_x86_64.whl
     pip3 install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages
-    pip3 install --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter
+    pip3 install --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter opencv
 

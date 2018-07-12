@@ -1,7 +1,7 @@
 # TensorFlow-GPU
-[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/840)
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/1269)
 
-Tensorflow Version: 1.8
+Tensorflow Version: 1.9
 
 Example script to run job on MCW-RCC GPU cluster:
 ```

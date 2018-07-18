@@ -3,14 +3,6 @@
 
 Tensorflow Version: 1.9
 
-##### Table of Contents  
-[Batch Job Script](##batch job script)
-[TensorFlow Jupyter Notebook Job Script]
-[Connect to Notebook]
-[TensorBoard Job Script]
-[Connect to TensorBoard]
-
-
 ## Batch Job Script
 ```
 #!/bin/bash

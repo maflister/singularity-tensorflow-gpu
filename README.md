@@ -3,7 +3,7 @@
 
 Tensorflow Version: 1.9
 
-##Batch Job Script
+## Batch Job Script
 ```
 #!/bin/bash
 #PBS -N tensorflow_test
@@ -25,7 +25,7 @@ cp -R output.log $PBS_O_WORKDIR
 rm -rf $SCR_DIR                             
 ```
 
-##TensorFlow Jupyter Notebook Job Script
+## TensorFlow Jupyter Notebook Job Script
 ```
 #!/bin/bash
 #PBS -N tf_jnb
@@ -102,3 +102,69 @@ http://localhost:9623
 
 You should now be connected to your Jupyter Notebook that is running on a cluster compute node. To close the notebook, select Logout. If you need to reconnect, repeat steps. If you're done with your Notebook, remember to stop the job with qdel.
 
+
+## Tensorboard Job Script
+```
+#!/bin/bash
+#PBS -N tensorboard
+#PBS -l nodes=1:ppn=1
+#PBS -l mem=5gb
+#PBS -l walltime=1:00:00
+#PBS -j oe
+
+# get tunneling info
+port=$(shuf -i8000-9999 -n1)
+node=$(hostname -s)
+user=$(whoami)
+
+# add your own log directory (required)
+logdir="~/path/to/your/logdir"
+
+cd $PBS_O_WORKDIR
+
+# print tunneling instructions 
+echo -e "
+1. SSH tunnel from your workstation using the following command:
+
+   ssh -L ${port}:${node}:${port} ${user}@$PBS_O_HOST
+
+   and point your web browser to http://localhost:${port}.
+
+2. Copy/paste the token below when you connect for the first time.
+"
+
+# load modules
+module load tensorflow/1.9
+
+tensorboard --logdir ${logdir} --port ${port}
+```
+1. Copy contents of tensorboard.pbs (example above) to a file in your home directory.
+
+2. Open terminal on cluster login node and submit the job script:
+
+```
+$ qsub tensorboard.pbs
+```
+
+## Connect to Notebook
+1. Check output file (*jobname*.o*JOBNUM*) for details.
+
+Example output file: tensorboard.o178936
+```
+SSH tunnel from your workstation using the following command:
+
+   ssh -L 8754:node01:8754 tester@loginnode
+
+and point your web browser to http://localhost:8754.
+```
+
+2. Open second terminal and run tunneling command from the output file:
+```
+$ ssh -L 8754:node01:8754 tester@loginnode
+```
+3. Open a browser and enter the URL from the output file:
+```
+http://localhost:8754
+```
+
+You should now be connected to TensorBoard. To close TensorBoard, close browser window. If you need to reconnect, repeat steps.

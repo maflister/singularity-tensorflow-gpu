@@ -13,7 +13,7 @@ Example script to run job on MCW-RCC GPU cluster:
 #PBS -l walltime=72:00:00
 #PBS -j oe
 
-module load tensorflow/1.8                    # Load the TensorFlow software
+module load tensorflow/1.9                    # Load the TensorFlow software
 
 cd $PBS_O_WORKDIR
 export SCR_DIR=/scratch/global/$USER/$PBS_JOBID

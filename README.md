@@ -72,7 +72,7 @@ jupyter-notebook
 $ qsub tfjupyternb.pbs
 ```
 
-## Connect to Notebook
+### Connect to Notebook
 1. Check output file (*jobname*.o*JOBNUM*) for details.
 
 Example output file: tf_jnb.o152668
@@ -110,7 +110,7 @@ http://localhost:9623
 You should now be connected to your Jupyter Notebook that is running on a cluster compute node. To close the notebook, select Logout. If you need to reconnect, repeat steps. If you're done with your Notebook, remember to stop the job with qdel.
 
 
-## Tensorboard Job Script
+## TensorBoard Job Script
 ```
 #!/bin/bash
 #PBS -N tensorboard
@@ -153,7 +153,7 @@ tensorboard --logdir ${logdir} --port ${port}
 $ qsub tensorboard.pbs
 ```
 
-## Connect to Notebook
+### Connect to TensorBoard
 1. Check output file (*jobname*.o*JOBNUM*) for details.
 
 Example output file: tensorboard.o178936

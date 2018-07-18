@@ -36,7 +36,7 @@ $ qsub tf.pbs
 ```
 #!/bin/bash
 #PBS -N tf_jnb
-#PBS -l nodes=1:ppn=1
+#PBS -l nodes=1:ppn=1:gpus=1
 #PBS -l mem=5gb
 #PBS -l walltime=1:00:00
 #PBS -j oe
@@ -114,7 +114,7 @@ You should now be connected to your Jupyter Notebook that is running on a cluste
 ```
 #!/bin/bash
 #PBS -N tensorboard
-#PBS -l nodes=1:ppn=1
+#PBS -l nodes=1:ppn=1:gpus=1
 #PBS -l mem=5gb
 #PBS -l walltime=1:00:00
 #PBS -j oe

@@ -24,6 +24,13 @@ tensorflow-gpu my_tf_script.py >> output.log
 cp -R output.log $PBS_O_WORKDIR              
 rm -rf $SCR_DIR                             
 ```
+1. Copy contents of tf.pbs (example above) to a file in your home directory.
+
+2. Open terminal on cluster login node and submit the job script:
+
+```
+$ qsub tf.pbs
+```
 
 ## TensorFlow Jupyter Notebook Job Script
 ```

@@ -145,7 +145,7 @@ module load tensorflow/1.9
 
 tensorboard --logdir ${logdir} --port ${port}
 ```
-1. Copy contents of tensorboard.pbs (example above) to a file in your home directory.
+1. Copy contents of tensorboard.pbs (example above) to a file in your home directory. Modify the logdir variable.
 
 2. Open terminal on cluster login node and submit the job script:
 

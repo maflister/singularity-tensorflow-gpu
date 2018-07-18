@@ -13,16 +13,16 @@ Tensorflow Version: 1.9
 #PBS -l walltime=72:00:00
 #PBS -j oe
 
-module load tensorflow/1.9                    # Load the TensorFlow software
+module load tensorflow/1.9                    
 
 cd $PBS_O_WORKDIR
 export SCR_DIR=/scratch/global/$USER/$PBS_JOBID
 mkdir -p $SCR_DIR
-cp my_tf_script.py $SCR_DIR                   # Copy all input files to scratch directory
+cp my_tf_script.py $SCR_DIR                   
 cd $SCR_DIR
-tensorflow-gpu my_tf_script.py >> output.log  # run your tensorflow python script
-cp -R output.log $PBS_O_WORKDIR               # Copy output back to working directory
-rm -rf $SCR_DIR                               # Clean up your scratch directory
+tensorflow-gpu my_tf_script.py >> output.log  
+cp -R output.log $PBS_O_WORKDIR              
+rm -rf $SCR_DIR                             
 ```
 
 ##TensorFlow Jupyter Notebook Job Script

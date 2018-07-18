@@ -1,0 +1,32 @@
+#!/bin/bash
+#PBS -N tensorboard
+#PBS -l nodes=1:ppn=1:gpus=1
+#PBS -l mem=5gb
+#PBS -l walltime=1:00:00
+#PBS -j oe
+
+# get tunneling info
+port=$(shuf -i8000-9999 -n1)
+node=$(hostname -s)
+user=$(whoami)
+
+# add your own log directory (required)
+logdir="~/path/to/your/logdir"
+
+cd $PBS_O_WORKDIR
+
+# print tunneling instructions 
+echo -e "
+1. SSH tunnel from your workstation using the following command:
+
+   ssh -L ${port}:${node}:${port} ${user}@$PBS_O_HOST
+
+   and point your web browser to http://localhost:${port}.
+
+2. Copy/paste the token below when you connect for the first time.
+"
+
+# load modules
+module load tensorflow/1.9
+
+tensorboard-gpu

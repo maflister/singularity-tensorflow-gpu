@@ -143,7 +143,7 @@ echo -e "
 # load modules
 module load tensorflow/1.9
 
-tensorboard --logdir ${logdir} --port ${port}
+tensorboard-gpu
 ```
 1. Copy contents of tensorboard.pbs (example above) to a file in your home directory. Modify the logdir variable.
 

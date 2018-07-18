@@ -4,11 +4,12 @@
 Tensorflow Version: 1.9
 
 ##### Table of Contents  
-[Headers](#headers)  
-[Emphasis](#emphasis)  
-...snip...    
-<a name="headers"/>
-## Headers
+[Batch Job Script]
+[TensorFlow Jupyter Notebook Job Script]
+[Connect to Notebook]
+[TensorBoard Job Script]
+[Connect to TensorBoard]
+
 
 ## Batch Job Script
 ```

@@ -16,7 +16,8 @@ This container runs Tensorflow-GPU 1.10.
     PATH="/cuda/bin:/nvidia:$PATH"
     LD_LIBRARY_PATH="/cuda/lib64:/nvidia:$LD_LIBRARY_PATH"
     CUDA_HOME="/cuda"
-    export PATH LD_LIBRARY_PATH CPATH CUDA_HOME
+    LC_ALL="C"
+    export PATH LD_LIBRARY_PATH CPATH CUDA_HOME LC_ALL
 
 %post
     # default mount points
@@ -57,12 +58,12 @@ This container runs Tensorflow-GPU 1.10.
     pip install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages
-    pip install --no-binary --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter
+    pip install --no-binary --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter jupyterlab pydicom opencv-python tables
 
     # Install TensorFlow-GPU
     export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.10.0-cp35-cp35m-linux_x86_64.whl
     pip3 install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages
-    pip3 install --no-binary --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter
+    pip3 install --no-binary --upgrade keras tflearn numpy nibabel h5py scikit-learn pandas scipy matplotlib ipykernel jupyter jupyterlab pydicom opencv-python tables
 

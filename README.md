@@ -123,6 +123,7 @@ You should now be connected to your Jupyter Notebook that is running on a cluste
 port=$(shuf -i8000-9999 -n1)
 node=$(hostname -s)
 user=$(whoami)
+submit_host=$(echo ${PBS_O_HOST%%.*}.rcc.mcw.edu)
 
 # add your own log directory (required)
 logdir="~/path/to/your/logdir"
@@ -133,7 +134,7 @@ cd $PBS_O_WORKDIR
 echo -e "
 1. SSH tunnel from your workstation using the following command:
 
-   ssh -L ${port}:${node}:${port} ${user}@$PBS_O_HOST
+   ssh -L ${port}:${node}:${port} ${user}@${submit_host}
 
    and point your web browser to http://localhost:${port}.
 

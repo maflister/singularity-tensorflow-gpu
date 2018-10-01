@@ -27,6 +27,6 @@ echo -e "
 "
 
 # load modules
-module load tensorflow/1.10
+module load tensorflow/1.11
 
 tensorboard-gpu

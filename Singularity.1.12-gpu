@@ -6,7 +6,7 @@ Maintainer Matthew Flister
 Version 11.06.18
 
 %help
-This container runs Tensorflow-GPU 1.12.
+This container runs TensorFlow 1.12-gpu.
 
 %environment
     SHELL=/bin/bash
@@ -21,7 +21,7 @@ This container runs Tensorflow-GPU 1.12.
 
     # Install necessary packages
     apt-get update && apt-get install -y --no-install-recommends \
-        libhdf5-serial-dev \
+        libhdf5-serial-dev 
     apt-get clean
 
     # Install python packages

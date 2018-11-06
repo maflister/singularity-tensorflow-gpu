@@ -3,10 +3,10 @@ From: ubuntu:16.04
 
 %labels
 Maintainer Matthew Flister
-Version 10.01.18
+Version 11.06.18
 
 %help
-This container runs Tensorflow-GPU 1.11.
+This container runs Tensorflow-GPU 1.12.
 
 %environment
     # nvidia driver libs specific cuda version libs are mounted by --bind command at run
@@ -54,7 +54,7 @@ This container runs Tensorflow-GPU 1.11.
     pip3 install --no-cache-dir --upgrade pip==9.0.3
 
     # Install TensorFlow-GPU
-    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.11.0-cp27-none-linux_x86_64.whl
+    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.12.0-cp27-none-linux_x86_64.whl
     pip install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages
@@ -78,7 +78,7 @@ This container runs Tensorflow-GPU 1.11.
         scikit-image
 
     # Install TensorFlow-GPU
-    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.11.0-cp35-cp35m-linux_x86_64.whl
+    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.12.0-cp35-cp35m-linux_x86_64.whl
     pip3 install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages

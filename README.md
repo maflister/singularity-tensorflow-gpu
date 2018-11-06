@@ -13,7 +13,7 @@ Tensorflow Version: 1.11
 #PBS -l walltime=72:00:00
 #PBS -j oe
 
-module load tensorflow/1.11                    
+module load tensorflow/1.12
 
 cd $PBS_O_WORKDIR
 export SCR_DIR=/scratch/global/$USER/$PBS_JOBID
@@ -60,7 +60,7 @@ echo -e "
 "
 
 # load modules
-module load tensorflow/1.11
+module load tensorflow/1.12
 
 jupyter-notebook
 ```
@@ -142,7 +142,7 @@ echo -e "
 "
 
 # load modules
-module load tensorflow/1.11
+module load tensorflow/1.12
 
 tensorboard-gpu
 ```

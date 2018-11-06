@@ -24,6 +24,6 @@ echo -e "
 "
 
 # load modules
-module load tensorflow/1.11
+module load tensorflow/1.12
 
 jupyter-notebook

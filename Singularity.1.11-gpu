@@ -3,7 +3,7 @@ From: ubuntu:16.04
 
 %labels
 Maintainer Matthew Flister
-Version 10.01.18
+Version 11.06.18
 
 %help
 This container runs Tensorflow-GPU 1.11.

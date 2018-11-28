@@ -46,7 +46,9 @@ This container runs TensorFlow-GPU 1.12.
         python-dev \
         python3-dev \
         python-setuptools \
-        python3-setuptools
+        python3-setuptools \
+        python-tk \
+        python3-tk 
     apt-get clean
 
     # Update pip

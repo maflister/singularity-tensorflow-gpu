@@ -3,7 +3,7 @@ From: ubuntu:16.04
 
 %labels
 Maintainer Matthew Flister
-Version 1.14
+Version 1.14-gpu
 
 %help
 This container runs TensorFlow-GPU 1.14.

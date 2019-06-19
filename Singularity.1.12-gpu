@@ -77,7 +77,8 @@ This container runs TensorFlow-GPU 1.12.
         opencv-python \
         tables \
         tqdm \
-        scikit-image
+        scikit-image \
+        SimpleITK
 
     # Install TensorFlow-GPU
     export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.12.0-cp35-cp35m-linux_x86_64.whl
@@ -101,4 +102,5 @@ This container runs TensorFlow-GPU 1.12.
         opencv-python \
         tables \
         tqdm \
-        scikit-image
+        scikit-image \
+        SimpleITK

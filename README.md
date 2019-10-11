@@ -1,7 +1,7 @@
 # TensorFlow
 [![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/1876)
 
-TensorFlow Version: 1.12-gpu
+TensorFlow Version: 2.0-gpu
 
 ## Batch Job Script
 ```
@@ -13,7 +13,7 @@ TensorFlow Version: 1.12-gpu
 #PBS -l walltime=72:00:00
 #PBS -j oe
 
-module load tensorflow/1.12
+module load tensorflow/2.0
 
 cd $PBS_O_WORKDIR
 export SCR_DIR=/scratch/global/$USER/$PBS_JOBID
@@ -60,7 +60,7 @@ echo -e "
 "
 
 # load modules
-module load tensorflow/1.12
+module load tensorflow/2.0
 
 jupyter-notebook
 ```
@@ -142,7 +142,7 @@ echo -e "
 "
 
 # load modules
-module load tensorflow/1.12
+module load tensorflow/2.0
 
 tensorboard-gpu
 ```

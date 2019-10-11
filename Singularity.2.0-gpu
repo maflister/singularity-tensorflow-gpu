@@ -3,10 +3,9 @@ From: ubuntu:16.04
 
 %labels
 Maintainer Matthew Flister
-Version 11.06.18
 
 %help
-This container runs TensorFlow-GPU 1.12.
+This container runs TensorFlow-GPU 2.0.
 
 %environment
     # nvidia driver libs specific cuda version libs are mounted by --bind command at run
@@ -52,15 +51,15 @@ This container runs TensorFlow-GPU 1.12.
     apt-get clean
 
     # Update pip
-    pip install --no-cache-dir --upgrade pip==9.0.3
-    pip3 install --no-cache-dir --upgrade pip==9.0.3
+    python -m pip install --no-cache-dir --upgrade pip
+    python3 -m pip install --no-cache-dir --upgrade pip
 
     # Install TensorFlow-GPU
-    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.12.0-cp27-none-linux_x86_64.whl
-    pip install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
+    export TF_BINARY_URL=https://files.pythonhosted.org/packages/ce/9a/6a3985daf15d0b87b1ef3c499293cf0889cd294223a6ca28b9529770b29e/tensorflow_gpu-2.0.0-cp27-cp27mu-manylinux2010_x86_64.whl
+    python -m pip install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages
-    pip install --no-binary --upgrade \
+    python -m pip install --no-binary --upgrade \
         keras \
         tflearn \
         numpy \
@@ -81,11 +80,11 @@ This container runs TensorFlow-GPU 1.12.
         SimpleITK
 
     # Install TensorFlow-GPU
-    export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/gpu/tensorflow_gpu-1.12.0-cp35-cp35m-linux_x86_64.whl
-    pip3 install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
+    export TF_BINARY_URL=https://files.pythonhosted.org/packages/89/9c/73e73b2afdfc2cbd34eb78e293f903cc6ea60837822a2643b87695954c35/tensorflow_gpu-2.0.0-cp35-cp35m-manylinux2010_x86_64.whl
+    python3 -m pip install --no-cache-dir --ignore-installed --upgrade $TF_BINARY_URL
 
     # Install python packages
-    pip3 install --no-binary --upgrade \
+    python3 -m pip install --no-binary --upgrade \
         keras \
         tflearn \
         numpy \
